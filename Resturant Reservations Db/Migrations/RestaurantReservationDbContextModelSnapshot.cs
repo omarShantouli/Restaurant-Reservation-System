@@ -49,6 +49,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("customer_id");
 
                     b.ToTable("Customers");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -91,6 +92,8 @@ namespace Resturant_Reservations_Db.Migrations
                             last_name = "Wilson",
                             phone_number = "111-222-3333"
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 
             modelBuilder.Entity("ResturantDataModel.Employees", b =>
@@ -119,6 +122,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("employee_id");
 
                     b.ToTable("Employees");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -161,6 +165,8 @@ namespace Resturant_Reservations_Db.Migrations
                             position = "Bartender",
                             resturant_id = 102
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 
             modelBuilder.Entity("ResturantDataModel.MenuItems", b =>
@@ -188,6 +194,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("item_id");
 
                     b.ToTable("MenuItems");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -230,6 +237,8 @@ namespace Resturant_Reservations_Db.Migrations
                             price = 1.99m,
                             resturant_id = 102
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 
             modelBuilder.Entity("ResturantDataModel.OrderItems", b =>
@@ -252,6 +261,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("order_item_id");
 
                     b.ToTable("OrderItems");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -289,6 +299,8 @@ namespace Resturant_Reservations_Db.Migrations
                             order_id = 103,
                             quantity = 4m
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 
             modelBuilder.Entity("ResturantDataModel.Orders", b =>
@@ -314,6 +326,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("order_id");
 
                     b.ToTable("Orders");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -356,6 +369,8 @@ namespace Resturant_Reservations_Db.Migrations
                             reservation_id = 105,
                             total_amount = 15.99m
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 
             modelBuilder.Entity("ResturantDataModel.Reservations", b =>
@@ -384,6 +399,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("reservation_id");
 
                     b.ToTable("Reservations");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -431,6 +447,8 @@ namespace Resturant_Reservations_Db.Migrations
                             resturant_id = 202,
                             table_id = 2
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 
             modelBuilder.Entity("ResturantDataModel.Resturants", b =>
@@ -449,10 +467,13 @@ namespace Resturant_Reservations_Db.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+<<<<<<< HEAD
                     b.Property<string>("opening_hours")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                     b.Property<string>("phone_number")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -460,6 +481,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("resturant_id");
 
                     b.ToTable("Resturants");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -502,6 +524,8 @@ namespace Resturant_Reservations_Db.Migrations
                             opening_hours = "Mon-Fri: 11 AM - 9 PM, Sat-Sun: 12 PM - 8 PM",
                             phone_number = "555-333-4444"
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 
             modelBuilder.Entity("ResturantDataModel.Tables", b =>
@@ -521,6 +545,7 @@ namespace Resturant_Reservations_Db.Migrations
                     b.HasKey("table_id");
 
                     b.ToTable("Tables");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -553,6 +578,8 @@ namespace Resturant_Reservations_Db.Migrations
                             capacity = 4,
                             resturant_id = 203
                         });
+=======
+>>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
                 });
 #pragma warning restore 612, 618
         }
