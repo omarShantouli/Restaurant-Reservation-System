@@ -14,6 +14,6 @@ namespace ResturantDataModel
         public string name { get; set; }
         public string address { get; set; }
         public string phone_number { get; set; }
-        List<TimeOnly> openning_hours { get; set; }
+        public string opening_hours { get; set; }
     }
 }
