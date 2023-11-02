@@ -6,10 +6,27 @@
     <RootNamespace>Resturant_Reservations_System</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Resturant Reservations Db\**" />
+    <Compile Remove="Resturant Reservations Domain\**" />
+    <EmbeddedResource Remove="Resturant Reservations Db\**" />
+    <EmbeddedResource Remove="Resturant Reservations Domain\**" />
+    <None Remove="Resturant Reservations Db\**" />
+    <None Remove="Resturant Reservations Domain\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.13">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
