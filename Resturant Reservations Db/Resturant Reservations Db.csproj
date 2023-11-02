@@ -4,7 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Resturant_Reservations_Db</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	  
+	  <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+	  <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+
+	  <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
