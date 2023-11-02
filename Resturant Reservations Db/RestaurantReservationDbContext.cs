@@ -16,13 +16,9 @@ namespace RestaurantReservation.Db
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-<<<<<<< HEAD
             optionsBuilder.UseSqlServer(
                 "Server=OMAR\\SQLEXPRESS;Database=RestaurantReservationCore;Trusted_Connection=True;TrustServerCertificate=True;"
                 );
-=======
-            optionsBuilder.UseSqlServer("Server=OMAR\\SQLEXPRESS;Database=RestaurantReservationCore;Trusted_Connection=True;TrustServerCertificate=True;");
->>>>>>> 3c4dc4cae360a5f9bf9d5714d1661aed2d4d6812
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
