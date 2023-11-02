@@ -21,7 +21,7 @@ namespace RestaurantReservation
                 party_size = 4
             };
 
-            AddReservation(reservation);
+           // AddReservation(reservation);
 
 
             //// Query reservations
