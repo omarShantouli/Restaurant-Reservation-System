@@ -196,7 +196,7 @@ namespace Resturant_Reservations_Db.Migrations
                             description = "Delicious burger with cheese",
                             name = "Burger",
                             price = 9.99m,
-                            resturant_id = 101
+                            resturant_id = 1
                         },
                         new
                         {
@@ -204,7 +204,7 @@ namespace Resturant_Reservations_Db.Migrations
                             description = "Pepperoni pizza with extra cheese",
                             name = "Pizza",
                             price = 12.49m,
-                            resturant_id = 102
+                            resturant_id = 2
                         },
                         new
                         {
@@ -212,7 +212,7 @@ namespace Resturant_Reservations_Db.Migrations
                             description = "Fresh garden salad with vinaigrette dressing",
                             name = "Salad",
                             price = 7.99m,
-                            resturant_id = 101
+                            resturant_id = 1
                         },
                         new
                         {
@@ -220,7 +220,7 @@ namespace Resturant_Reservations_Db.Migrations
                             description = "Spaghetti with marinara sauce",
                             name = "Pasta",
                             price = 10.99m,
-                            resturant_id = 103
+                            resturant_id = 3
                         },
                         new
                         {
@@ -228,7 +228,7 @@ namespace Resturant_Reservations_Db.Migrations
                             description = "Carbonated soft drink",
                             name = "Soda",
                             price = 1.99m,
-                            resturant_id = 102
+                            resturant_id = 2
                         });
                 });
 
@@ -258,35 +258,35 @@ namespace Resturant_Reservations_Db.Migrations
                         {
                             order_item_id = 1,
                             item_id = 1,
-                            order_id = 101,
+                            order_id = 1,
                             quantity = 2m
                         },
                         new
                         {
                             order_item_id = 2,
                             item_id = 3,
-                            order_id = 101,
+                            order_id = 1,
                             quantity = 1m
                         },
                         new
                         {
                             order_item_id = 3,
                             item_id = 2,
-                            order_id = 102,
+                            order_id = 2,
                             quantity = 3m
                         },
                         new
                         {
                             order_item_id = 4,
                             item_id = 4,
-                            order_id = 102,
+                            order_id = 2,
                             quantity = 2m
                         },
                         new
                         {
                             order_item_id = 5,
                             item_id = 5,
-                            order_id = 103,
+                            order_id = 3,
                             quantity = 4m
                         });
                 });
@@ -320,40 +320,40 @@ namespace Resturant_Reservations_Db.Migrations
                         {
                             order_id = 1,
                             employee_id = 1,
-                            order_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5845),
-                            reservation_id = 101,
+                            order_date = new DateTime(2023, 11, 5, 15, 0, 0, 0, DateTimeKind.Unspecified),
+                            reservation_id = 1,
                             total_amount = 25.99m
                         },
                         new
                         {
                             order_id = 2,
                             employee_id = 2,
-                            order_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5892),
-                            reservation_id = 102,
+                            order_date = new DateTime(2023, 11, 4, 4, 30, 0, 0, DateTimeKind.Unspecified),
+                            reservation_id = 2,
                             total_amount = 35.49m
                         },
                         new
                         {
                             order_id = 3,
                             employee_id = 3,
-                            order_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5894),
-                            reservation_id = 103,
+                            order_date = new DateTime(2023, 11, 7, 4, 0, 0, 0, DateTimeKind.Unspecified),
+                            reservation_id = 3,
                             total_amount = 19.99m
                         },
                         new
                         {
                             order_id = 4,
                             employee_id = 1,
-                            order_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5895),
-                            reservation_id = 104,
+                            order_date = new DateTime(2023, 11, 5, 3, 0, 0, 0, DateTimeKind.Unspecified),
+                            reservation_id = 4,
                             total_amount = 42.75m
                         },
                         new
                         {
                             order_id = 5,
                             employee_id = 2,
-                            order_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5897),
-                            reservation_id = 105,
+                            order_date = new DateTime(2023, 11, 4, 2, 15, 0, 0, DateTimeKind.Unspecified),
+                            reservation_id = 5,
                             total_amount = 15.99m
                         });
                 });
@@ -389,46 +389,46 @@ namespace Resturant_Reservations_Db.Migrations
                         new
                         {
                             reservation_id = 1,
-                            customer_id = 101,
+                            customer_id = 1,
                             party_size = 4,
-                            reservation_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5913),
-                            resturant_id = 201,
+                            reservation_date = new DateTime(2023, 11, 1, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            resturant_id = 1,
                             table_id = 1
                         },
                         new
                         {
                             reservation_id = 2,
-                            customer_id = 102,
+                            customer_id = 2,
                             party_size = 6,
-                            reservation_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5917),
-                            resturant_id = 202,
+                            reservation_date = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Unspecified),
+                            resturant_id = 2,
                             table_id = 2
                         },
                         new
                         {
                             reservation_id = 3,
-                            customer_id = 103,
+                            customer_id = 3,
                             party_size = 2,
-                            reservation_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5919),
-                            resturant_id = 201,
+                            reservation_date = new DateTime(2023, 12, 2, 17, 30, 0, 0, DateTimeKind.Unspecified),
+                            resturant_id = 1,
                             table_id = 3
                         },
                         new
                         {
                             reservation_id = 4,
-                            customer_id = 104,
+                            customer_id = 4,
                             party_size = 8,
-                            reservation_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5920),
-                            resturant_id = 203,
+                            reservation_date = new DateTime(2023, 10, 7, 16, 0, 0, 0, DateTimeKind.Unspecified),
+                            resturant_id = 3,
                             table_id = 1
                         },
                         new
                         {
                             reservation_id = 5,
-                            customer_id = 105,
+                            customer_id = 5,
                             party_size = 5,
-                            reservation_date = new DateTime(2023, 11, 2, 17, 53, 40, 37, DateTimeKind.Local).AddTicks(5922),
-                            resturant_id = 202,
+                            reservation_date = new DateTime(2023, 11, 5, 15, 15, 0, 0, DateTimeKind.Unspecified),
+                            resturant_id = 2,
                             table_id = 2
                         });
                 });
@@ -527,31 +527,31 @@ namespace Resturant_Reservations_Db.Migrations
                         {
                             table_id = 1,
                             capacity = 4,
-                            resturant_id = 201
+                            resturant_id = 1
                         },
                         new
                         {
                             table_id = 2,
                             capacity = 6,
-                            resturant_id = 201
+                            resturant_id = 1
                         },
                         new
                         {
                             table_id = 3,
                             capacity = 2,
-                            resturant_id = 202
+                            resturant_id = 2
                         },
                         new
                         {
                             table_id = 4,
                             capacity = 8,
-                            resturant_id = 202
+                            resturant_id = 2
                         },
                         new
                         {
                             table_id = 5,
                             capacity = 4,
-                            resturant_id = 203
+                            resturant_id = 3
                         });
                 });
 #pragma warning restore 612, 618

@@ -60,44 +60,44 @@ namespace RestaurantReservation.Db
         {
             return new List<MenuItems>
             {
-                new MenuItems { item_id = 1, resturant_id = 101, name = "Burger", description = "Delicious burger with cheese", price = 9.99M },
-                new MenuItems { item_id = 2, resturant_id = 102, name = "Pizza", description = "Pepperoni pizza with extra cheese", price = 12.49M },
-                new MenuItems { item_id = 3, resturant_id = 101, name = "Salad", description = "Fresh garden salad with vinaigrette dressing", price = 7.99M },
-                new MenuItems { item_id = 4, resturant_id = 103, name = "Pasta", description = "Spaghetti with marinara sauce", price = 10.99M },
-                new MenuItems { item_id = 5, resturant_id = 102, name = "Soda", description = "Carbonated soft drink", price = 1.99M }
+                new MenuItems { item_id = 1, resturant_id = 1, name = "Burger", description = "Delicious burger with cheese", price = 9.99M },
+                new MenuItems { item_id = 2, resturant_id = 2, name = "Pizza", description = "Pepperoni pizza with extra cheese", price = 12.49M },
+                new MenuItems { item_id = 3, resturant_id = 1, name = "Salad", description = "Fresh garden salad with vinaigrette dressing", price = 7.99M },
+                new MenuItems { item_id = 4, resturant_id = 3, name = "Pasta", description = "Spaghetti with marinara sauce", price = 10.99M },
+                new MenuItems { item_id = 5, resturant_id = 2, name = "Soda", description = "Carbonated soft drink", price = 1.99M }
             };
         }
         List<OrderItems> GetOrderItemsList()
         {
             return new List<OrderItems>
             {
-                new OrderItems { order_item_id = 1, order_id = 101, item_id = 1, quantity = 2 },
-                new OrderItems { order_item_id = 2, order_id = 101, item_id = 3, quantity = 1 },
-                new OrderItems { order_item_id = 3, order_id = 102, item_id = 2, quantity = 3 },
-                new OrderItems { order_item_id = 4, order_id = 102, item_id = 4, quantity = 2 },
-                new OrderItems { order_item_id = 5, order_id = 103, item_id = 5, quantity = 4 }
+                new OrderItems { order_item_id = 1, order_id = 1, item_id = 1, quantity = 2 },
+                new OrderItems { order_item_id = 2, order_id = 1, item_id = 3, quantity = 1 },
+                new OrderItems { order_item_id = 3, order_id = 2, item_id = 2, quantity = 3 },
+                new OrderItems { order_item_id = 4, order_id = 2, item_id = 4, quantity = 2 },
+                new OrderItems { order_item_id = 5, order_id = 3, item_id = 5, quantity = 4 }
             };
         }
         List<Orders> GetOrdersList()
         {
             return new List<Orders>
             {
-                new Orders { order_id = 1, reservation_id = 101, employee_id = 1, order_date = DateTime.Now, total_amount = 25.99M },
-                new Orders { order_id = 2, reservation_id = 102, employee_id = 2, order_date = DateTime.Now, total_amount = 35.49M },
-                new Orders { order_id = 3, reservation_id = 103, employee_id = 3, order_date = DateTime.Now, total_amount = 19.99M },
-                new Orders { order_id = 4, reservation_id = 104, employee_id = 1, order_date = DateTime.Now, total_amount = 42.75M },
-                new Orders { order_id = 5, reservation_id = 105, employee_id = 2, order_date = DateTime.Now, total_amount = 15.99M }
+                new Orders { order_id = 1, reservation_id = 1, employee_id = 1, order_date = new DateTime(2023, 11, 5, 15, 0, 0), total_amount = 25.99M },
+                new Orders { order_id = 2, reservation_id = 2, employee_id = 2, order_date = new DateTime(2023, 11, 4, 4, 30, 0), total_amount = 35.49M },
+                new Orders { order_id = 3, reservation_id = 3, employee_id = 3, order_date = new DateTime(2023, 11, 7, 4, 0, 0), total_amount = 19.99M },
+                new Orders { order_id = 4, reservation_id = 4, employee_id = 1, order_date = new DateTime(2023, 11, 5, 3, 0, 0), total_amount = 42.75M },
+                new Orders { order_id = 5, reservation_id = 5, employee_id = 2, order_date = new DateTime(2023, 11, 4, 2, 15, 0), total_amount = 15.99M }
             };
         }
         List<Reservations> GetReservationsList()
         {
             return new List<Reservations>
             {
-                new Reservations { reservation_id = 1, customer_id = 101, resturant_id = 201, table_id = 1, reservation_date = DateTime.Now, party_size = 4 },
-                new Reservations { reservation_id = 2, customer_id = 102, resturant_id = 202, table_id = 2, reservation_date = DateTime.Now, party_size = 6 },
-                new Reservations { reservation_id = 3, customer_id = 103, resturant_id = 201, table_id = 3, reservation_date = DateTime.Now, party_size = 2 },
-                new Reservations { reservation_id = 4, customer_id = 104, resturant_id = 203, table_id = 1, reservation_date = DateTime.Now, party_size = 8 },
-                new Reservations { reservation_id = 5, customer_id = 105, resturant_id = 202, table_id = 2, reservation_date = DateTime.Now, party_size = 5 }
+                new Reservations { reservation_id = 1, customer_id = 1, resturant_id = 1, table_id = 1, reservation_date = new DateTime(2023, 11, 1, 10, 0, 0), party_size = 4 },
+                new Reservations { reservation_id = 2, customer_id = 2, resturant_id = 2, table_id = 2, reservation_date = new DateTime(2023, 1, 5, 14, 0, 0), party_size = 6 },
+                new Reservations { reservation_id = 3, customer_id = 3, resturant_id = 1, table_id = 3, reservation_date = new DateTime(2023, 12, 2, 17, 30, 0), party_size = 2 },
+                new Reservations { reservation_id = 4, customer_id = 4, resturant_id = 3, table_id = 1, reservation_date = new DateTime(2023, 10, 7, 16, 0, 0), party_size = 8 },
+                new Reservations { reservation_id = 5, customer_id = 5, resturant_id = 2, table_id = 2, reservation_date = new DateTime(2023, 11, 5, 15, 15, 0), party_size = 5 }
             };
         }
         List<Resturants> GetRestaurantsList()
@@ -150,11 +150,11 @@ namespace RestaurantReservation.Db
         {
             return new List<Tables>
             {
-                new Tables { table_id = 1, resturant_id = 201, capacity = 4 },
-                new Tables { table_id = 2, resturant_id = 201, capacity = 6 },
-                new Tables { table_id = 3, resturant_id = 202, capacity = 2 },
-                new Tables { table_id = 4, resturant_id = 202, capacity = 8 },
-                new Tables { table_id = 5, resturant_id = 203, capacity = 4 },
+                new Tables { table_id = 1, resturant_id = 1, capacity = 4 },
+                new Tables { table_id = 2, resturant_id = 1, capacity = 6 },
+                new Tables { table_id = 3, resturant_id = 2, capacity = 2 },
+                new Tables { table_id = 4, resturant_id = 2, capacity = 8 },
+                new Tables { table_id = 5, resturant_id = 3, capacity = 4 },
             };
         }
 
