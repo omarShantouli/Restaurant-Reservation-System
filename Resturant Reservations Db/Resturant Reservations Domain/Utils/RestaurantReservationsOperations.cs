@@ -81,5 +81,11 @@ namespace Resturant_Reservations_Db.Resturant_Reservations_Domain
             return totalRevenue;
         }
 
+        public List<Customers> FindCustomersWithLargeParties(int partySizeThreshold)
+        {
+            var result = _context.FindCustomersWithLargeParties(partySizeThreshold);
+            return result;
+        }
+
     }
 }

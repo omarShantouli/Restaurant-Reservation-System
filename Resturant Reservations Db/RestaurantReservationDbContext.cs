@@ -23,6 +23,19 @@ namespace RestaurantReservation.Db
                 );
         }
 
+        public List<Customers> FindCustomersWithLargeParties(int partySizeThreshold)
+        {
+            var result = new List<Customers>();
+
+            // Create a SqlParameter for the stored procedure parameter
+            var partySizeParam = new SqlParameter("@PartySizeThreshold", partySizeThreshold);
+
+            // Execute the stored procedure
+            result = Customers.FromSqlRaw("EXEC FindCustomersWithLargeParties @PartySizeThreshold", partySizeParam).ToList();
+
+            return result;
+        }
+
         public decimal CalculateTotalRevenue(int restaurantId)
         {
             var restaurantIdParam = new SqlParameter("@RestaurantId", restaurantId);
