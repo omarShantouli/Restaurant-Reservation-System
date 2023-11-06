@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using ResturantDataModel;
+using System.Data;
 
 namespace RestaurantReservation.Db
 {
@@ -19,6 +21,29 @@ namespace RestaurantReservation.Db
             optionsBuilder.UseSqlServer(
                 "Server=OMAR\\SQLEXPRESS;Database=RestaurantReservationCore;Trusted_Connection=True;TrustServerCertificate=True;"
                 );
+        }
+
+        public decimal CalculateTotalRevenue(int restaurantId)
+        {
+            var restaurantIdParam = new SqlParameter("@RestaurantId", restaurantId);
+            var totalRevenueParam = new SqlParameter
+            {
+                ParameterName = "@TotalRevenue",
+                SqlDbType = SqlDbType.Decimal,
+                Precision = 18,
+                Scale = 2,
+                Direction = ParameterDirection.Output
+            };
+
+            Database.ExecuteSqlRaw("SET @TotalRevenue = dbo.CalculateTotalRevenue(@RestaurantId)", restaurantIdParam, totalRevenueParam);
+
+            if (totalRevenueParam.Value is decimal totalRevenue)
+            {
+                return totalRevenue;
+            }
+
+            return 0;
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -30,7 +30,7 @@ namespace RestaurantReservation
             //    Console.WriteLine(restaurant.address + " " + restaurant.name);
             //}
 
-            //var restaurantReservationsOperations = new RestaurantReservationsOperations();
+            var restaurantReservationsOperations = new RestaurantReservationsOperations();
 
             //var employees = restaurantReservationsOperations.ListManagers();
             //foreach (var e in employees)
@@ -47,7 +47,7 @@ namespace RestaurantReservation
             //restaurantReservationsOperations.ListOrdersAndMenuItems(1);
             //Console.WriteLine(restaurantReservationsOperations.CalculateAverageOrderAmount(3));
 
-
+            Console.WriteLine(restaurantReservationsOperations.GetTotalRevenueForRestaurant(1));
 
         }
 

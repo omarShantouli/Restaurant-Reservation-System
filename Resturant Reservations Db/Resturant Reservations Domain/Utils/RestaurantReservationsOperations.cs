@@ -75,5 +75,11 @@ namespace Resturant_Reservations_Db.Resturant_Reservations_Domain
              return result.avg;
         }
 
+        public decimal GetTotalRevenueForRestaurant(int restaurantId)
+        {
+            decimal totalRevenue = _context.CalculateTotalRevenue(restaurantId);
+            return totalRevenue;
+        }
+
     }
 }
