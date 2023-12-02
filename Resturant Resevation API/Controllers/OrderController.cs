@@ -19,14 +19,14 @@ namespace Resturant_Resevation_API.Controllers
             _context = new RestaurantReservationDbContext();
         }
 
-        // GET: api/Customers
+        // GET
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Orders>>> GetOrders()
         {
             return await _context.Orders.ToListAsync();
         }
 
-        // GET: api/Customers/5
+        // GET
         [HttpGet("{id}")]
         public async Task<ActionResult<Orders>> GetOrder(int id)
         {
@@ -40,7 +40,7 @@ namespace Resturant_Resevation_API.Controllers
             return order;
         }
 
-        // POST: api/Customers
+        // POST
         [HttpPost]
         public async Task<ActionResult<Orders>> PostOrder(Orders order)
         {
@@ -68,7 +68,7 @@ namespace Resturant_Resevation_API.Controllers
 
         }
 
-        // PUT: api/Customers/5
+        // PUT
         [HttpPut("{id}")]
         public async Task<IActionResult> PutOrder(int id, Orders order)
         {
@@ -99,7 +99,7 @@ namespace Resturant_Resevation_API.Controllers
         }
 
 
-        // DELETE: api/Customers/5
+        // DELETE
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteOrder(int id)
         {

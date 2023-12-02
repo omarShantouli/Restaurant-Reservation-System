@@ -40,6 +40,31 @@ namespace Resturant_Resevation_API.Controllers
             return employee;
         }
 
+        // GET:
+        [HttpGet("managers")]
+        public async Task<ActionResult<IEnumerable<Employees>>> GetManagers()
+        {
+            return await _context.Employees.Where(e => e.position.ToLower() == "manager").ToListAsync();
+        }
+
+        // GET:
+        [HttpGet("{employee_id}/average-order-amount")]
+        public async Task<ActionResult> GetAverageOrderAmount(int employee_id)
+        {
+            var averageOrderAmount = _context.Orders
+           .Where(o => o.employee_id == employee_id)
+           .Average(o => o.total_amount);
+
+            double averageOrderAmountDouble = Convert.ToDouble(averageOrderAmount);
+
+            if (double.IsNaN(averageOrderAmountDouble))
+            {
+                return NotFound($"No orders found for employee with ID {employee_id}");
+            }
+
+            return Ok(new { AverageOrderAmount = averageOrderAmount });
+        }
+
         // POST
         [HttpPost]
         public async Task<ActionResult<Employees>> PostEmployee(Employees employee)

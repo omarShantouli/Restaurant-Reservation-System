@@ -18,14 +18,14 @@ namespace Resturant_Resevation_API.Controllers
             _context = new RestaurantReservationDbContext();
         }
 
-        // GET: api/Customers
+        // GET
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Reservations>>> GetReservations()
         {
             return await _context.Reservations.ToListAsync();
         }
 
-        // GET: api/Customers/5
+        // GET
         [HttpGet("{id}")]
         public async Task<ActionResult<Reservations>> GetReservation(int id)
         {
@@ -39,7 +39,43 @@ namespace Resturant_Resevation_API.Controllers
             return reservation;
         }
 
-        // POST: api/Customers
+        // GET
+        [HttpGet("customer/{customer_id}")]
+        public async Task<ActionResult<IEnumerable<Reservations>>> GetReservations(int customer_id)
+        {
+            return await _context.Reservations.Where(r => r.customer_id == customer_id).ToListAsync();
+        }
+
+        // GET
+        [HttpGet("{reservation_id}/orders")]
+        public async Task<ActionResult<IEnumerable<Orders>>> GetOrders(int reservation_id)
+        {
+            return await _context.Orders.Where(o => o.reservation_id == reservation_id).ToListAsync();
+        }
+
+        // GET
+        [HttpGet("{reservation_id}/menu-items")]
+        public ActionResult<IEnumerable<MenuItems>> GetMenuItems(int reservation_id)
+        {
+            var orders = _context.Orders.Where(o => o.reservation_id == reservation_id).ToList();
+            var orderItems = orders.Join(_context.OrderItems, orderItem => orderItem.order_id,
+                            order => order.order_id, (orderItems, order) => new
+                            {
+                                order.item_id,
+                            });
+            return  orderItems.Join(_context.MenuItems, menuItem => menuItem.item_id,
+                    orderItem => orderItem.item_id, (menuItem, orderItem) => new MenuItems
+                    {
+                        item_id = menuItem.item_id,
+                        resturant_id = orderItem.resturant_id,
+                        name = orderItem.name,
+                        description = orderItem.description,
+                        price = orderItem.price
+                    }).ToList();
+        }
+
+
+        // POST
         [HttpPost]
         public async Task<ActionResult<Reservations>> PostReservation(Reservations reservation)
         {
@@ -67,7 +103,7 @@ namespace Resturant_Resevation_API.Controllers
 
         }
 
-        // PUT: api/Customers/5
+        // PUT
         [HttpPut("{id}")]
         public async Task<IActionResult> PutReservation(int id, Reservations reservation)
         {
@@ -98,7 +134,7 @@ namespace Resturant_Resevation_API.Controllers
         }
 
 
-        // DELETE: api/Customers/5
+        // DELETE
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteReservation(int id)
         {
