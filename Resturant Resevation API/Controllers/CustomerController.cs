@@ -1,4 +1,5 @@
 ﻿using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestaurantReservation.Db;
@@ -7,6 +8,7 @@ using ResturantDataModel;
 
 namespace Resturant_Resevation_API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/customer")]
     public class CustomerController : Controller
